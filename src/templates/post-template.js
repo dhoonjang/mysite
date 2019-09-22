@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import "./post-template.scss"
 
 export default function Template({ data }) {
   const {
@@ -13,8 +14,11 @@ export default function Template({ data }) {
       <div className="template">
         <SEO title="POSTS" />
         <h1>{frontmatter.title}</h1>
-        <h4>{frontmatter.date}</h4>
-        <div className="" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="InfoBar">
+          <h4>{frontmatter.description}</h4>
+          <h4 className="date">{frontmatter.date}</h4>
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   )
@@ -28,6 +32,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY년 MM월 DD일 ")
         path
         title
+        description
       }
     }
   }

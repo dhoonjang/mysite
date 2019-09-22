@@ -18,7 +18,6 @@ const IndexPage = ({
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Hi people</h1>
       <div className="PostGrid">{Posts}</div>
     </Layout>
   )
@@ -37,6 +36,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY년 MM월 DD일")
             path
             title
+            description
           }
         }
       }

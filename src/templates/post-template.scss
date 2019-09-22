@@ -1,0 +1,12 @@
+.template {
+  .InfoBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.45rem;
+    .date {
+      color: dimgray;
+      margin-left: 1.45rem;
+      min-width: max-content;
+    }
+  }
+}

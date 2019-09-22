@@ -1,20 +1,6 @@
 .PostGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(max-content, 400px));
-  grid-gap: 5px;
+  grid-template-columns: repeat(2, minmax(1fr, max-content));
+  grid-gap: 1rem;
   border: 1px solid white;
-  .PostPreview {
-    padding: 10px;
-    height: 100px;
-    background-color: gainsboro;
-    border: 1px solid gainsboro;
-    color: white;
-    &:hover {
-      background-color: white;
-    }
-    .PostLink {
-      color: black;
-      text-decoration: none;
-    }
-  }
 }

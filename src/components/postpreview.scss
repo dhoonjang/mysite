@@ -1,0 +1,22 @@
+.PostPreview {
+  padding: 10px;
+  background-color: gainsboro;
+  border: 1px solid gainsboro;
+  &:hover {
+    background-color: white;
+  }
+}
+
+.PostLink {
+  color: black;
+  text-decoration: none;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  border: 1px solid dimgray;
+  background-color: dimgray;
+  height: 30px;
+}
