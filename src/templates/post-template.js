@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 export default function Template({ data }) {
   const {
@@ -8,12 +9,14 @@ export default function Template({ data }) {
   } = data
 
   return (
-    <div>
-      <SEO title="POSTS" />
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    <Layout>
+      <div className="template">
+        <SEO title="POSTS" />
+        <h1>{frontmatter.title}</h1>
+        <h2>{frontmatter.date}</h2>
+        <div className="" dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+    </Layout>
   )
 }
 
