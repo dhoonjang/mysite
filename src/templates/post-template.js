@@ -13,7 +13,7 @@ export default function Template({ data }) {
       <div className="template">
         <SEO title="POSTS" />
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <h4>{frontmatter.date}</h4>
         <div className="" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
