@@ -8,6 +8,7 @@ export default function Template({ data }) {
 
   return (
     <div>
+      <SEO title="POSTS" />
       <h1>{frontmatter.title}</h1>
       <h2>{frontmatter.date}</h2>
       <div dangerouslySetInnerHTML={{ __html: html }} />
