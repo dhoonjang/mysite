@@ -1,6 +1,10 @@
+@import "../utils.scss";
+
 .PostGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(1fr, max-content));
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-  border: 1px solid white;
+  @include for-size(_msmall) {
+    grid-template-columns: 1fr;
+  }
 }

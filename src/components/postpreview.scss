@@ -1,22 +1,41 @@
+@import "../utils.scss";
+
 .PostPreview {
-  padding: 10px;
-  background-color: gainsboro;
-  border: 1px solid gainsboro;
+  background-color: $white;
+  border: 2px solid $gray;
+  .PostTitle {
+    padding: 10px;
+    background-color: $gray;
+    margin-bottom: 10px;
+  }
+  .PostBody {
+    padding: 0px 10px;
+    margin: 0px;
+  }
   &:hover {
-    background-color: white;
+    background-color: $gray;
   }
 }
 
-.PostLink {
-  color: black;
-  text-decoration: none;
-}
-
-.tags {
+.Tags {
   display: flex;
-  justify-content: space-around;
-  color: white;
-  border: 1px solid dimgray;
-  background-color: dimgray;
-  height: 30px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 0px 10px;
+  justify-content: flex-start;
+  justify-items: center;
+  color: $red;
+  .Tag {
+    min-width: max-content;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 0px 10px;
+    border-radius: 3px;
+    font-weight: bolder;
+    font-size: 0.786rem;
+    border: 1px solid $red;
+    &:hover {
+      background-color: $white;
+    }
+  }
 }

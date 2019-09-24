@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "silgothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin for-size($size) {
+  @if $size == _small {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $size == _msmall {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == _medium {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == _mlarge {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == _large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+$font-default: "silgothic", Arial, Helvetica, sans-serif;
+$black: #373737;
+$gray: #e3e3e3;
+$white: #f6f6f8;
+$red: #c60021;
