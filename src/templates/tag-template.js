@@ -10,7 +10,7 @@ const TagPage = ({ pageContext, data }) => {
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  } tagged with `
 
   const Posts = edges.map(({ node }) => (
     <PostPreview key={node.id} post={node} />
@@ -19,7 +19,10 @@ const TagPage = ({ pageContext, data }) => {
   return (
     <Layout>
       <SEO title={tag} />
-      <h2>{tagHeader}</h2>
+      <h2>
+        {tagHeader}
+        <b>[ {tag} ]</b>
+      </h2>
       <div className="PostGrid">{Posts}</div>
     </Layout>
   )
