@@ -12,6 +12,9 @@ const Header = ({ siteTitle }) => (
         <Link to="/tags">
           <div className="AllTagsLink">All Tags</div>
         </Link>
+        <Link to="/tags">
+          <div className="AllTagsLink">Schedule</div>
+        </Link>
       </div>
     </div>
   </header>
