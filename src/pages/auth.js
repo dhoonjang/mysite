@@ -6,6 +6,9 @@ import Axios from "axios"
 
 const getCode = search => new URLSearchParams(search).get("code")
 
+Axios.defaults.headers.post["Content-Type"] =
+  "application/x-www-form-urlencoded"
+
 const Auth = ({ location }) => {
   const code = getCode(location.search)
   console.log(window.location)
