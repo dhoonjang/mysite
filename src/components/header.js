@@ -9,12 +9,14 @@ const Header = ({ siteTitle }) => (
         <Link to="/">
           <h1 className="Title">{siteTitle}</h1>
         </Link>
-        <Link to="/tags">
-          <div className="AllTagsLink">All Tags</div>
-        </Link>
-        <Link to="/tags">
-          <div className="AllTagsLink">Schedule</div>
-        </Link>
+        <div>
+          <Link to="/tags">
+            <div className="AllTagsLink">All Tags</div>
+          </Link>
+          <Link to="/schedule">
+            <div className="AllTagsLink">Schedule</div>
+          </Link>
+        </div>
       </div>
     </div>
   </header>

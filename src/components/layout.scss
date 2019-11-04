@@ -29,9 +29,11 @@ body {
       margin: 0;
     }
     .AllTagsLink {
+      display: inline-block;
       color: $red;
       font-size: 1rem;
       font-weight: bold;
+      margin-left: 10px;
       padding: 5px 20px;
       border-radius: 5px;
       border: 1px solid $red;
