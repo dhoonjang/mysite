@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 const Schedule = ({ location }) => {
   const redirect_uri = location.origin
 
-  console.log(location.origin)
+  console.log(redirect_uri)
   return (
     <Layout>
       <SEO title="Schedule" />

@@ -12,6 +12,7 @@ const Auth = ({ location }) => {
   useEffect(() => {
     const Login = async () => {
       try {
+        console.log(redirect_uri)
         const res = await Axios({
           method: "post",
           url: "https://kauth.kakao.com/oauth/token",
