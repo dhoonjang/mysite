@@ -7,7 +7,7 @@ const getCode = search => new URLSearchParams(search).get("code")
 
 const Auth = ({ location }) => {
   const code = getCode(location.search)
-  const redirect_uri = location.origin + location.pathname
+  const redirect_uri = location.origin
 
   useEffect(() => {
     const Login = async () => {
@@ -18,7 +18,7 @@ const Auth = ({ location }) => {
           params: {
             grant_type: "authorization_code",
             client_id: "839c5882660321b55d631e0eedc8b2e3",
-            redirect_uri,
+            redirect_uri: redirect_uri + "/auth",
             code,
           },
         })
