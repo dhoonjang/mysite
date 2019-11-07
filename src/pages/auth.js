@@ -8,7 +8,6 @@ const getCode = search => new URLSearchParams(search).get("code")
 
 const Auth = ({ location }) => {
   const code = getCode(location.search)
-  console.log(window.location)
   const redirect_uri = window.location.origin + window.location.pathname
 
   useEffect(() => {
