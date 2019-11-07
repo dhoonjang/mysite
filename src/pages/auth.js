@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useFetch } from "../Tool"
 import Axios from "axios"
 
 const getCode = search => new URLSearchParams(search).get("code")
 
 const Auth = ({ location }) => {
   const code = getCode(location.search)
-  const redirect_uri = window.location.origin + window.location.pathname
+  const redirect_uri = location.origin + location.pathname
 
   useEffect(() => {
     const Login = async () => {
@@ -42,7 +41,7 @@ const Auth = ({ location }) => {
       }
     }
     Login()
-  }, [code])
+  }, [code, redirect_uri])
 
   return (
     <Layout>
